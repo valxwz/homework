@@ -1,0 +1,101 @@
+body {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 18px;
+        background-image: url(images/pidgeon-background.jpg);
+        background-color: #dddddd;
+      }
+
+ h1{
+ 	font-size: 2em;
+ 	line-height: 1.5em;
+ 	color:#c12258;
+ }
+
+p.main{
+	color: black;
+	font-size: 18px;
+	padding-top: 15px;
+}
+
+main {
+    margin-bottom: 70px;
+}
+
+a{
+	font-size: 18px;
+	color: #c12258;
+	text-decoration: underline;
+}
+
+a:focus{
+	border: 1px solid red;
+}
+
+
+table {
+	border-collapse: separate;
+	border: 2px solid black;
+	border-radius: 10px;
+	border-spacing: 0px;
+}
+
+
+
+
+th.colhead {
+	min-width: 150px;
+	padding: 10px;
+	color: white;
+	background-color: #7e0830;
+	text-align: center;
+}
+
+th, td, tr{
+	border-bottom: 2px solid black;
+	text-align: center;
+}
+
+td, tr{
+	padding:15px;
+}
+
+tr:nth-child(even) {
+	background: #dddddd}
+
+tr:nth-child(odd) {
+	background: transparent;}
+
+tr:hover{
+	background-color: #fab9cf;
+
+}
+
+/* top-left border-radius */
+table tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+
+/* top-right border-radius */
+table tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+/* bottom-left border-radius */
+tbody tr:last-child th:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+/* bottom-right border-radius */
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+footer{
+	position: fixed;
+	text-align: center;
+	width:100%;
+	color: white;
+	background-color: black;
+	min-height: 60px;
+	bottom: 0px;
+}
