@@ -1,0 +1,313 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ddd;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+nav a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;/*Your code here - remove the underline*/
+  ;
+}
+
+nav a:hover {
+  text-decoration: underline/*Your code here - add the underline*/ ;
+}
+
+.skip a {
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;/*Your code here - position relative to the parent */
+  ;
+  top: -40px;    /*Your code here - place 40px higher */
+  ;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+/*Add the selector and rule to move the skip link to the exact top.*/
+.skip a:focus {
+  top: 0;
+}
+
+/*Add the selector and code to put a 2px black border around all elements in focus.*/
+:focus {
+  border: 2px solid black;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  grid-column: 1 / -1;  /*Can you explain what this does?*/
+
+  /*begin in column 1 and span the full column*/
+  grid-row: 7 / span 1;   /*Can you rewrite it? Yes. Should rewrite this*/
+  padding-top: 30px;
+  text-align: center;
+}
+
+.container {
+
+  /*Your code here  */
+  display: grid;
+  grid-row-gap: 15px;
+  grid-template-columns: 100px 500px 100px;  /*Provided*/
+  grid-template-rows: 30px auto auto auto auto auto 100px;
+  width: 100vw;
+}
+
+.nav {
+
+  /*Your code here */  
+  display: inline-block;
+  vertical-align: middle;
+  grid-column: 1/-1;
+  grid-row: 1/2;  /*Provided*/
+  background-color: #ddd;
+  padding: 20px 0;
+  text-align: left;
+}
+
+.nav a {
+  float: left;
+}
+
+header {
+  background-attachment: fixed; /* Parallax effect */
+  background-image: url(../images/header.jpg);      /* Your code here - Link to header.jpg in the images folder */
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  height: 400px;                /* Parallax effect */
+
+  /*Your code here - cover the entire row*/
+  grid-column: 1/-1;
+  grid-row: 2/span 1;
+}
+
+header p {
+  color: white;
+  font-size: 24px;
+  padding: 0 100px;
+  text-align: center;
+}
+
+.about-image {
+
+  /*Your code here */
+  grid-column: 1/-1;
+  grid-row: 3/span 1;
+  overflow: hidden;
+  max-height: 700px;
+}
+
+.about {
+
+  /*Your code here */
+  grid-column: 2/span 1;
+  grid-row: 3/span 1;
+}
+
+.method-image {
+  grid-column: 1/-1;
+  grid-row: 4/span 1;
+  overflow: hidden;
+  max-height: 700px;  /*Your code here */
+}
+
+.method {
+  grid-column: 2/span 1;
+  grid-row: 4/span 1;    /*Your code here - start in the 2nd column*/
+}
+
+.clients-image {
+
+  /*Your code here */
+  grid-column: 1/-1;
+  grid-row: 5/span 1;
+  overflow: hidden;
+  max-height: 700px;
+}
+
+.clients {
+
+  /*Your code here */
+  grid-column: 2/span 2;
+  grid-row: 5/span 1;
+}
+
+.contact-image {
+
+  /*Your code here */
+  grid-column: 1/-1;
+  grid-row: 6/span 1;
+  overflow: hidden;
+  max-height: 700px;
+}
+
+.contact {
+
+  /*Your code here */
+  grid-column: 2/span 1;
+  grid-row: 6/span 1;
+}
+
+.text-block {
+
+  /*Your code here */
+  -webkit-align-self: center; /* Safari 7.0+ */
+  align-self: center;
+  justify-self: center;
+  background-color: rgba(255, 255, 255, .8);
+  border: 10px solid black;
+  padding: 30px;
+}
+
+@media screen and (min-width:800px)
+
+/*Your code here - Add the first media query.*/
+{
+  .container {
+
+    /*Your code here */
+
+    display: grid;
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
+  }
+
+  .nav {
+
+    /*Your code here */
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #ddd;
+    padding: 35px 0;
+    text-align: right;
+  }
+
+  /*  .nav a{
+      float:right;
+
+
+
+  }*/
+  .nav li {
+  }
+
+  .about-image {
+
+    /*Your code here */
+    grid-column: 2/span 2;
+    grid-row: 3/ span 1;
+    overflow: hidden;
+    max-height: 700px;
+  }
+
+  .about {
+
+    /*Your code here */
+    grid-column: 3/ span 2;
+    grid-row: 3/ span 1;
+  }
+
+  .method-image {
+
+    /*Your code here */
+    grid-column: 3/span 2;
+    grid-row: 4/span 1;
+    overflow: hidden;
+    max-height: 700px;
+  }
+
+  .method {
+    grid-column: 2/span 2;
+    grid-row: 4/span 1;    /*Your code here */
+  }
+
+  .clients-image {
+
+    /*Your code here */
+    grid-column: 2/span 2;
+    grid-row: 5/span 1;
+    overflow: hidden;
+    max-height: 700px;
+  }
+
+  .clients {
+
+    /*Your code here */
+    grid-column: 3/span 2;
+    grid-row: 5/span 1;
+  }
+
+  .contact-image {
+
+    /*Your code here */
+    grid-column: 3/span 2;
+    grid-row: 6/span 1;
+    overflow: hidden;
+    max-height: 700px;
+  }
+
+  .contact {
+    grid-column: 2/span 2;
+    grid-row: 6/span 1;    /*Your code here */
+  }
+
+}
+
+/*End the media query*/
+@media screen and (prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior: none; /* Removes scroll animation */
+  }
+
+  .skip a {
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none;/* Your code here - set to default setting */
+    transition: none/* Your code here - set to default setting */
+    z-index:1;
+  }
+
+  .skip a:focus {
+    top: 0;
+  }
+
+}
