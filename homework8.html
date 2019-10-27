@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Note: This file was originally named audio_begin.html.  So if you notice something
+	different in the example video don't be alarmed.-->
+
+	<meta charset="UTF-8">
+	<title>JavaScript Video Controls</title>
+	<style>
+		video{
+			width: 90%;
+			border: 1px solid black;
+		}
+		/*Use this class to change video color*/
+		.grayscale{
+			filter: grayscale(100%);
+		}
+		button{
+			margin-bottom: 5px;
+		}
+		/*You can not change anything in the style tag other than to add images for the buttons. */
+</style>
+</head>
+<body> 
+<main>
+	<h1>JavaScript Video Controls</h1>
+	<button onclick="playVid()" type="button" class = "play">Play Video</button>
+	<button onclick="pauseVid()" type="button" class = "pause">Pause Video</button><br>
+	<button onclick="slowSpeed()" type="button">Slow Down</button>
+	<button onclick="increaseSpeed()" type="button">Speed Up</button><br>
+
+	
+
+	<figure>
+	<video id="myVideo">
+		<source src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Big_Buck_Bunny_Trailer_400p.ogv" type="video/ogg" />
+	  	Your browser does not support HTML5 video.
+	</video>
+	<figcaption>[Dramatic music throughout but no speaking]</figcaption>
+</figure>
+
+	<br/>
+	<button id="mute" onclick="mute()" type="button">Mute</button><br>
+
+	<label for="volumeSlider">Volume </label>: 0 <input type="range" id="volumeSlider"
+         min="0" max="100" value="100" step="10"> 100%<br>
+	<div>Volume is: <span id = "volume"> </span><br><br></div>
+
+	<button onclick="gray()" type="button">Old School</button>
+	<button onclick="color()" type="button">Original</button>
+	<button onclick="random()" type="button">Random</button><br>
+
+	<p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+
+	<script> 
+		// You may only change code in the script tag.
+		// You can not change the HTML in the file.
+	var vid = document.getElementById("myVideo"); 
+	function playVid() { 
+		vid.play(); 
+		console.log("Play Video")
+		// Play the video and update the volume.
+	} 
+	function pauseVid() { 
+		vid.pause(); 
+		console.log("Pause Video")
+	  	// Play the video.
+	} 
+	function slowSpeed() {
+		vid.playbackRate = 0.5;
+		console.log("slow speed by ", vid.playbackRate )
+		// Slow the vido speed by half and log the new rate to the console. 
+	} 
+	function increaseSpeed() {
+		vid.playbackRate = 2;
+		console.log("spped up by ",vid.playbackRate)
+		// Double the video speen and log the new rate to the console. 
+	} 
+	function mute() { 
+		if (vid.muted) {
+			vid.muted = false;
+			document.querySelector("#mute").innerHTML="Muted";
+			console.log("Unmute")
+		}
+		else{
+			vid.muted = true;
+			document.querySelector("#mute").innerHTML="Unmuted";
+			console.log("Mute")
+		}
+		// If the video is currently muted: 
+		// 		log "unmute" to the console
+		// 		unmute the video
+		// 		change the button text to "mute"
+		// If the video is currently unmuted:  
+	 	//		log "mute" to the console
+		// 		mute the video
+		// 		change the button text to "unmute"
+	}
+	volumeSlider.oninput = function() {
+		var changedVolume=document.getElementById('volumeSlider').value;
+
+		vid.volume=changedVolume/100;
+		document.getElementById("volume").innerHTML=changedVolume
+		console.log("current volume:", changedVolume)
+
+		// Change the volume (0 is off, 100 is full volume, everything else is proportionally in between)
+		// Make sure to update the volume element.
+		// Update the console log with the new volume as well.
+	}
+	       
+	function gray() { 
+		console.log("In grayscale")
+		var declaration = document.styleSheets[0].cssRules[1].style;
+		var new_grey_scale=100
+		declaration.setProperty("filter", "grayscale("+new_grey_scale+"%)");
+		document.getElementById("myVideo").className = "grayscale";
+		// Utilize the existing grayscale class.
+	}
+	function color() {
+		console.log("In color") 
+		document.getElementById("myVideo").className = "";
+
+		// Remove the existing grayscale class.
+	}
+	// Not sure if we can test for this??? 
+	function random(){
+		var declaration = document.styleSheets[0].cssRules[1].style;
+		var new_grey_scale=Math.random()*100
+		declaration.setProperty("filter", "grayscale("+new_grey_scale+"%)");
+		document.getElementById("myVideo").className = "grayscale";
+		console.log("current grey scale:", new_grey_scale)
+		// Use setProperty to change the grayscale filder and transform properties of the video.
+		// Log what the new values are to the console.
+	}
+	</script> 
+
+</main>
+</body> 
+</html>
