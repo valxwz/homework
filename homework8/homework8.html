@@ -18,6 +18,22 @@
 		button{
 			margin-bottom: 5px;
 		}
+		.play{
+			background: url("play.png") no-repeat;
+			background-size: 30px 30px;
+			border:none;
+			text-align: right;
+			width:100px;
+			height:30px;
+		}
+		.pause{
+			background: url("pause.png") no-repeat;
+			background-size: 30px 30px;
+			border:none;
+			text-align: right;
+			width:100px;
+			height:30px;
+		}
 		/*You can not change anything in the style tag other than to add images for the buttons. */
 </style>
 </head>
@@ -58,13 +74,15 @@
 	var vid = document.getElementById("myVideo"); 
 	function playVid() { 
 		vid.play(); 
+		var volume=document.getElementById('volumeSlider').value;
+		document.getElementById("volume").innerHTML=volume
 		console.log("Play Video")
 		// Play the video and update the volume.
 	} 
 	function pauseVid() { 
 		vid.pause(); 
 		console.log("Pause Video")
-	  	// Play the video.
+	  	// Pause the video.
 	} 
 	function slowSpeed() {
 		vid.playbackRate = 0.5;
@@ -111,24 +129,26 @@
 	function gray() { 
 		console.log("In grayscale")
 		var declaration = document.styleSheets[0].cssRules[1].style;
-		var new_grey_scale=100
-		declaration.setProperty("filter", "grayscale("+new_grey_scale+"%)");
+		declaration.setProperty("filter", "grayscale(100%)");
+		declaration.setProperty("transform", "skewX(0deg)");
 		document.getElementById("myVideo").className = "grayscale";
 		// Utilize the existing grayscale class.
 	}
 	function color() {
 		console.log("In color") 
 		document.getElementById("myVideo").className = "";
+		// declaration.removeProperty("grayscale");
 
 		// Remove the existing grayscale class.
 	}
 	// Not sure if we can test for this??? 
 	function random(){
 		var declaration = document.styleSheets[0].cssRules[1].style;
-		var new_grey_scale=Math.random()*100
-		declaration.setProperty("filter", "grayscale("+new_grey_scale+"%)");
+		var random_num=Math.random()*100
+		declaration.setProperty("transform", "skewX("+random_num+"deg)");
+		declaration.setProperty("filter", "grayscale("+random_num+"%)");
 		document.getElementById("myVideo").className = "grayscale";
-		console.log("current grey scale:", new_grey_scale)
+		console.log("greyscale and skewX are:", random_num)
 		// Use setProperty to change the grayscale filder and transform properties of the video.
 		// Log what the new values are to the console.
 	}
