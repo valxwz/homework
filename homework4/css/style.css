@@ -103,6 +103,8 @@ footer {
   float: left;
 }
 
+
+
 header {
   background-attachment: fixed; /* Parallax effect */
   background-image: url(../images/header.jpg);      /* Your code here - Link to header.jpg in the images folder */
