@@ -65,10 +65,10 @@ nav ul li a{
         text-decoration:none;
         transition:all 0.3s ease-in-out;}
 nav ul li.active{
-         color:#F38A8A;
+         color:#F49905;
          font-weight: bold;
-         background-color: #F38A8A;
-         border-bottom:3px solid #F38A8A;
+         background-color: #F49905;
+         border-bottom:3px solid #F49905;
 }
 
 
