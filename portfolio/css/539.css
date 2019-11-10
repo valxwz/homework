@@ -10,6 +10,12 @@ body {
 .mySlides {
   display: none
 }
+#hero h1{
+  margin-left: 10px;
+}
+#hero h2{
+  margin-left: 10px;
+}
 
 header {
   display: flex;
@@ -20,7 +26,7 @@ header {
   height: 50px;
   line-height: 50px;
   background-color: #eee;
-  z-index: 1000;
+  z-index:1000;
 }
 
 header * {
@@ -28,57 +34,60 @@ header * {
   height: 50px;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #55443D;
-  height: 40px;
-  width: 100%;
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  background:#55443D;
+  height:40px;
+  width:100%;
   z-index: 1;
+  }
+
+nav ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    position:relative;
+    display:table;
+    margin:0 auto;}
+
+nav ul li{
+      display:table-cell;
+    }
+
+nav ul li a{      
+        padding:10px 20px;
+        display:block;
+        color:white;
+        text-decoration:none;
+        transition:all 0.3s ease-in-out;}
+nav ul li.active{
+         color:#F38A8A;
+         font-weight: bold;
+         background-color: #F38A8A;
+         border-bottom:3px solid #F38A8A;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  position: relative;
-  display: table;
-  margin: 0 auto;
-}
 
-nav ul li {
-  display: table-cell;
-}
-
-nav ul li a {
-  padding: 10px 20px;
-  display: block;
-  color: white;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-}
-
-nav ul li.active {
-  color: #F38A8A;
-  font-weight: bold;
-  background-color: #F38A8A;
-  border-bottom: 3px solid #F38A8A;
-}
 
 /*nav*/
-
 /*----- Toggle Button -----*/
 .toggle-nav {
-  display: none;
+  display:none;
 }
 
+
 .menu ul {
-  display: inline-block;
+  display:inline-block;
 }
 
 /*nav end*/
-p {
+
+
+
+p{
   display: flex;
   text-align: left;
 }
@@ -86,11 +95,12 @@ p {
 /*grid*/
 .workcontainer {
   display: grid;
-  grid-template-columns: 100px 1fr 1fr 100px;
-  grid-template-rows: 600px 100px 600px 100px 600px 100px;
+    grid-template-columns: 100px 1fr 1fr 100px;
+    grid-template-rows:600px 100px 600px 100px 600px 100px;
+
 }
 
-.mockup1 {
+.mockup1{
   background-image: url('../img/mockup_1.png');
   background-size: cover;
   grid-column: 2/span 1;
@@ -98,8 +108,7 @@ p {
   overflow: hidden;
   max-height: 500px;
 }
-
-.mockup2 {
+.mockup2{
   background-image: url('../img/mockup_2.png');
   background-size: cover;
   grid-column: 3/span 1;
@@ -108,7 +117,7 @@ p {
   max-height: 500px;
 }
 
-.mockup3 {
+.mockup3{
   background-image: url('../img/mockup_3.png');
   background-size: cover;
   grid-column: 2/span 1;
@@ -116,8 +125,7 @@ p {
   overflow: hidden;
   max-height: 500px;
 }
-
-.mockup4 {
+.mockup4{
   background-image: url('../img/mockup_4.png');
   background-size: cover;
   grid-column: 3/span 1;
@@ -125,8 +133,7 @@ p {
   overflow: hidden;
   max-height: 500px;
 }
-
-.mockup5 {
+.mockup5{
   background-image: url('../img/mockup_5.png');
   background-size: cover;
   grid-column: 2/span 1;
@@ -134,8 +141,7 @@ p {
   overflow: hidden;
   max-height: 500px;
 }
-
-.mockup6 {
+.mockup6{
   background-image: url('../img/mockup_6.png');
   background-size: cover;
   grid-column: 3/span 1;
@@ -143,8 +149,7 @@ p {
   overflow: hidden;
   max-height: 500px;
 }
-
-.text1 {
+.text1{
   background-size: cover;
   grid-column: 2/span 1;
   grid-row: 2/span 1;
@@ -152,8 +157,7 @@ p {
   max-height: 500px;
   margin: 0 60px;
 }
-
-.text2 {
+.text2{
   background-size: cover;
   grid-column: 3/span 1;
   grid-row: 2/span 1;
@@ -161,8 +165,7 @@ p {
   max-height: 500px;
   margin: 0 60px;
 }
-
-.text3 {
+.text3{
   background-size: cover;
   grid-column: 2/span 1;
   grid-row: 4/span 1;
@@ -170,8 +173,7 @@ p {
   max-height: 500px;
   margin: 0 60px;
 }
-
-.text4 {
+.text4{
   background-size: cover;
   grid-column: 3/span 1;
   grid-row: 4/span 1;
@@ -179,8 +181,7 @@ p {
   max-height: 500px;
   margin: 0 60px;
 }
-
-.text5 {
+.text5{
   background-size: cover;
   grid-column: 2/span 1;
   grid-row: 6/span 1;
@@ -188,8 +189,7 @@ p {
   max-height: 500px;
   margin: 0 60px;
 }
-
-.text6 {
+.text6{
   background-size: cover;
   grid-column: 3/span 1;
   grid-row: 6/span 1;
@@ -198,28 +198,29 @@ p {
   margin: 0 60px;
 }
 
-.project {
+.project{
   align-items: center;
   justify-content: center;
   width: 450px;
-  height: 490px;
-  margin: 50px auto;
-  text-align: center;
+    height: 490px;
+    margin:50px auto;
+    text-align: center;
 }
 
-nav a:hover {
+
+
+nav a:hover{
   font-weight: bold;
 }
-
 nav a:focus {
   font-weight: bold;
 }
 
-.cardp {
+.cardp{
   font-size: 20px !important;
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-  text-align: left;
+   margin-top: 0 !important;
+   padding-top: 0 !important;
+   text-align: left;
 }
 
 .hit-the-floor {
@@ -227,7 +228,19 @@ nav a:focus {
   font-size: 12em;
   font-weight: bold;
   font-family: Helvetica;
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+  text-shadow: 
+    0 1px 0 #ccc, 
+    0 2px 0 #c9c9c9, 
+    0 3px 0 #bbb, 
+    0 4px 0 #b9b9b9, 
+    0 5px 0 #aaa, 
+    0 6px 1px rgba(0,0,0,.1), 
+    0 0 5px rgba(0,0,0,.1), 
+    0 1px 3px rgba(0,0,0,.3), 
+    0 3px 5px rgba(0,0,0,.2), 
+    0 5px 10px rgba(0,0,0,.25), 
+    0 10px 10px rgba(0,0,0,.2), 
+    0 20px 20px rgba(0,0,0,.15);
 }
 
 .hit-the-floor {
@@ -260,6 +273,7 @@ header * {
   height: 50px;
 }
 
+
 section {
   min-height: 100vh;
   border: 1px solid black;
@@ -277,19 +291,19 @@ section {
   padding: 10px;
 }
 
+
 #hero .profile-img {
   width: 300px;
   border-radius: 50%;
 }
 
-.section-max-width {
-  max-width: 800px;
-}
 
-.list-width {
-  width: 30px;
+.section-max-width{
+  max-width:800px;
 }
-
+.list-width{
+  width:30px;
+}
 footer {
   text-align: center;
   padding: 50px;
@@ -297,14 +311,12 @@ footer {
 
 #hero h1 {
   font-size: 4vw;
-  margin-right: 100px;
-  text-align: left;
+  margin-right: 100px;text-align: left;
 }
 
 #hero h2 {
   font-size: 3vw;
-  margin-right: 100px;
-  text-align: left;
+  margin-right: 100px;text-align: left;
 }
 
 section h2 {
@@ -320,8 +332,10 @@ header a {
   color: black;
 }
 
+
 /*flip card end*/
-.maincontainer {
+
+ .maincontainer{
   position: relative;
   margin-bottom: 50px;
   width: 250px;
@@ -330,10 +344,11 @@ header a {
   top: 180px;
   left: 50%;
   transform: translate(-50%, -50%);
+
 }
 
 /* THE CARD HOLDS THE FRONT AND BACK FACES */
-.thecard {
+.thecard{
   position: relative;
   top: 0;
   left: 0;
@@ -345,17 +360,17 @@ header a {
 }
 
 /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
-.thecard:hover {
+.thecard:hover{
   transform: rotateY(180deg);
 }
 
 /*flipbytab*/
-#flipcard:focus {
+#flipcard:focus{
   transform: rotateY(180deg);
 }
 
 /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
-.thefront {
+ .thefront{
   position: absolute;
   top: 0;
   left: 0;
@@ -369,7 +384,7 @@ header a {
 }
 
 /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
-.theback {
+.theback{
   position: absolute;
   top: 0;
   left: 0;
@@ -384,8 +399,9 @@ header a {
   transform: rotateY(180deg);
 }
 
+
 /*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
-.thefront h1, .theback h1 {
+.thefront h1, .theback h1{
   font-family: 'zilla slab', sans-serif;
   padding: 30px;
   font-weight: bold;
@@ -393,13 +409,17 @@ header a {
   text-align: center;
 }
 
-.thefront p, .theback p {
+.thefront p, .theback p{
   font-family: 'zilla slab', sans-serif;
   padding: 30px;
   font-weight: normal;
   font-size: 12px;
   text-align: center;
 }
+
+
+
+
 
 /* Add everything below here */
 #hero {
@@ -410,9 +430,10 @@ header a {
   background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('../img/designbg.jpg');
 }
 
-#work {
+#work{
   background-color: #F2EEEB;
-  display: inline-block;
+  display:inline-block; 
+
 }
 
 #video {
@@ -420,12 +441,14 @@ header a {
 }
 
 #photo {
-  background-color: #fff0f2;
+  background-color: #fff0f2 ;
 }
 
 #contact {
   background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('../img/marble.jpg');
 }
+
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Segoe UI", Arial, sans-serif;
@@ -458,252 +481,230 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.05);
 }
 
+
 .row {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
 }
 
+
+
 .col-1-2 {
   margin-top: 20px;
-  float: left;
-  padding-right: 20px;
-  width: 50%;
+    float: left;
+    padding-right: 20px;
+    width: 50%;
 }
+
+
+
 
 /*work section css***********************/
-.headline h2, .headline h3 {
-  margin: 0px;
-  width: 100%;
-  display: inline;
-  padding: 1em;
-  vertical-align: top;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 28px;
+
+.headline h2,
+.headline h3
+ {
+    margin:0px;
+    width: 100%;
+    display: inline;
+    padding:1em;
+    vertical-align: top;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
 }
 
+
+
+
 /*css anamition */
+
 div.at-container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
 }
-
-@media screen and (min-width:600px) {
-  .at-item {
-    font-size: 24px;
-    color: #3079ed;
-    animation-name: angry-animation;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-  }
-
-}
-
+@media screen and (min-width:500px){
+.at-item {
+  font-size: 24px;
+  color: #3079ed;
+  animation-name: angry-animation;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}}
 @keyframes angry-animation {
-  0% {
+  0%{
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
-
-  20% {
+  20%{
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
-
-  40% {
+  40%{
     -webkit-transform: translateY(-30px);
     transform: translateY(-30px);
   }
-
-  50% {
+  50%{
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
-
-  60% {
+  60%{
     -webkit-transform: translateY(-15px);
     transform: translateY(-15px);
   }
-
-  80% {
+  80%{
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
-
-  100% {
+  100%{
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
-
 }
 
 /*end of css anamition*/
 
 /*grid change*/
-@media screen and (max-width:800px) {
-  .maincontainer {
-    position: relative;
-    margin-bottom: 50px;
-    width: 200px;
-    height: 250px;
-    background: none;
-    top: 180px;
-    left: 50%;
-    margin-bottom: 80px;
-    transform: translate(-50%, -50%);
-  }
+@media screen and (max-width:500px){
 
-  .cardp {
-    font-size: 15px !important;
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    text-align: left !important;
-  }
+   .maincontainer{
+  position: relative;
+  margin-bottom: 50px;
+  width: 200px;
+  height: 250px;
+  background: none;
+  top: 180px;
+  left: 50%;
+  margin-bottom: 80px;
+  transform: translate(-50%, -50%);
 
-  .workcontainer {
-    display: grid;
+}
+.cardp{
+  font-size: 15px !important;
+   margin-top: 0 !important;
+   padding-top: 0 !important;
+   text-align:left !important;
+}
+
+.workcontainer {
+  display: grid;
     grid-template-columns: 20px 1fr 20px;
-    grid-template-rows: 400px 50px 400px 50px 400px 50px 400px 50px 400px 50px 400px 50px;
-  }
+    grid-template-rows:400px 50px 400px 50px 400px 50px 400px 50px 400px 50px 400px 50px;
 
-  .mockup1 {
-    background-image: url('../img/mockup_1.png');
-    background-size: cover;
-    grid-column: 2/span 1;
-    grid-row: 1/span 1;
-    overflow: hidden;
-    max-height: 500px;
-  }
+}
 
-  .mockup2 {
-    background-image: url('../img/mockup_2.png');
-    background-size: cover;
-    grid-column: 2/span 1;
-    grid-row: 3/span 1;
-    overflow: hidden;
-    max-height: 500px;
-  }
+.mockup1{
+  background-image: url('../img/mockup_1.png');
+  background-size: cover;
+  grid-column: 2/span 1;
+  grid-row: 1/span 1;
+  overflow: hidden;
+  max-height: 500px;
+}
+.mockup2{
+  background-image: url('../img/mockup_2.png');
+  background-size: cover;
+  grid-column: 2/span 1;
+  grid-row: 3/span 1;
+  overflow: hidden;
+  max-height: 500px;
+}
 
-  .mockup3 {
-    background-image: url('../img/mockup_3.png');
-    background-size: cover;
-    grid-column: 2/span 1;
-    grid-row: 5/span 1;
-    overflow: hidden;
-    max-height: 500px;
-  }
+.mockup3{
+  background-image: url('../img/mockup_3.png');
+  background-size: cover;
+  grid-column: 2/span 1;
+  grid-row: 5/span 1;
+  overflow: hidden;
+  max-height: 500px;
+}
+.mockup4{
+  background-image: url('../img/mockup_4.png');
+  background-size: cover;
+  grid-column: 2/span 1;
+  grid-row: 7/span 1;
+  overflow: hidden;
+  max-height: 500px;
+}
+.mockup5{
+  background-image: url('../img/mockup_5.png');
+  background-size: cover;
+  grid-column: 2/span 1;
+  grid-row: 9/span 1;
+  overflow: hidden;
+  max-height: 500px;
+}
+.mockup6{
+  background-image: url('../img/mockup_6.png');
+  background-size: cover;
+  grid-column: 2/span 1;
+  grid-row: 11/span 1;
+  overflow: hidden;
+  max-height: 500px;
+}
+.text1{
+  background-size: cover;
+  grid-column: 2/span 1;
+  grid-row: 2/span 1;
+  overflow: hidden;
+  max-height: 500px;
+  margin: 0 60px;
+}
+.text2{
+  background-size: cover;
+  grid-column: 3/span 1;
+  grid-row: 4/span 1;
+  overflow: hidden;
+  max-height: 500px;
+  margin: 0 60px;
+}
+.text3{
+  background-size: cover;
+  grid-column: 2/span 1;
+  grid-row: 6/span 1;
+  overflow: hidden;
+  max-height: 500px;
+  margin: 0 60px;
+}
+.text4{
+  background-size: cover;
+  grid-column: 3/span 1;
+  grid-row: 8/span 1;
+  overflow: hidden;
+  max-height: 500px;
+  margin: 0 60px;
+}
+.text5{
+  background-size: cover;
+  grid-column: 2/span 1;
+  grid-row: 10/span 1;
+  overflow: hidden;
+  max-height: 500px;
+  margin: 0 60px;
+}
+.text6{
+  background-size: cover;
+  grid-column: 2/span 1;
+  grid-row: 12/span 1;
+  overflow: hidden;
+  max-height: 500px;
+  margin: 0 60px;
+}
 
-  .mockup4 {
-    background-image: url('../img/mockup_4.png');
-    background-size: cover;
-    grid-column: 2/span 1;
-    grid-row: 7/span 1;
-    overflow: hidden;
-    max-height: 500px;
-  }
-
-  .mockup5 {
-    background-image: url('../img/mockup_5.png');
-    background-size: cover;
-    grid-column: 2/span 1;
-    grid-row: 9/span 1;
-    overflow: hidden;
-    max-height: 500px;
-  }
-
-  .mockup6 {
-    background-image: url('../img/mockup_6.png');
-    background-size: cover;
-    grid-column: 2/span 1;
-    grid-row: 11/span 1;
-    overflow: hidden;
-    max-height: 500px;
-  }
-
-  .text1 {
-    background-size: cover;
-    grid-column: 2/span 1;
-    grid-row: 2/span 1;
-    overflow: hidden;
-    max-height: 500px;
-    margin: 0 60px;
-  }
-
-  .text2 {
-    background-size: cover;
-    grid-column: 3/span 1;
-    grid-row: 4/span 1;
-    overflow: hidden;
-    max-height: 500px;
-    margin: 0 60px;
-  }
-
-  .text3 {
-    background-size: cover;
-    grid-column: 2/span 1;
-    grid-row: 6/span 1;
-    overflow: hidden;
-    max-height: 500px;
-    margin: 0 60px;
-  }
-
-  .text4 {
-    background-size: cover;
-    grid-column: 3/span 1;
-    grid-row: 8/span 1;
-    overflow: hidden;
-    max-height: 500px;
-    margin: 0 60px;
-  }
-
-  .text5 {
-    background-size: cover;
-    grid-column: 2/span 1;
-    grid-row: 10/span 1;
-    overflow: hidden;
-    max-height: 500px;
-    margin: 0 60px;
-  }
-
-  .text6 {
-    background-size: cover;
-    grid-column: 2/span 1;
-    grid-row: 12/span 1;
-    overflow: hidden;
-    max-height: 500px;
-    margin: 0 60px;
-  }
-
-  .project {
-    align-items: center;
-    justify-content: center;
-    width: 300px;
+.project{
+  align-items: center;
+  justify-content: center;
+  width: 300px;
     height: 320px;
-    margin: 50px auto;
+    margin:50px auto;
     text-align: center;
-  }
-
 }
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width:900px) {
-  #hero .profile-img {
-    width: 200px;
-    border-radius: 50%;
-    max-width: 100%;
-    height: auto;
-    text-align: right;
-  }
-
-}
-
-@media screen and (max-width:800px) {
   .column {
     flex: 50%;
     max-width: 50%;
@@ -711,109 +712,132 @@ div.at-container {
 
   /*remove css annimation*/
   .at-item {
-    font-size: 24px;
-    color: #3079ed;
-    animation-name: "";
-  }
-
+  font-size: 24px;
+  color: #3079ed;
+  animation-name:"";
+}
+  #hero .profile-img {
+  width: 200px;
+  border-radius: 50%;
+  max-width:100%;
+  height:auto; 
+  text-align: right;
 }
 
+/*responvive nav*/
+  .wrap {
+    width:90%;
+  }
+
+
+  .menu {
+    display:inline-block;
+  }
+
+  .menu ul.showNav {
+    display:none;
+  }
+
+  .menu ul {
+    width:50%;
+    height: 350px;
+    position:absolute;
+    top:120%;
+    left:0px;
+    padding:10px 18px;
+    box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+    border-radius:3px;
+    background:#55443D;
+  }
+
+/*add a small arrow*/
+  .menu ul:after {
+    width:0px;
+    height:0px;
+    position:absolute;
+    top:0%;
+    left:0px;
+    content:'';
+    transform:translate(0%, -100%);
+    border-left:7px solid transparent;
+    border-right:7px solid transparent;
+    border-bottom:7px solid #55443D;
+  }
+
+
+ 
+
+
+  .menu li {
+    margin:5px 0px 5px 0px;
+    float:none;
+    display:block;
+  }
+
+  .menu a {
+    display:block;
+  }
+
+  .toggle-nav {
+    float:left;
+    display:inline-block;
+  }
+  
+
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+
+
+
+
+
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
-  .contact_anno {
+@media screen and (max-width:300px) {
+  .contact_anno{
     display: none;
   }
-
-  .col-1-2 {
+  .col-1-2{
     width: 100%;
   }
-
   .column {
     flex: 100%;
     max-width: 100%;
   }
 
-  .maincontainer {
-    position: relative;
-    margin-bottom: 50px;
-    width: 180px;
-    height: 300px;
-    background: none;
-    top: 180px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .cardp {
-    font-size: 12px !important;
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    text-align: center !important;
-  }
-
-  #hero .profile-img {
-    width: 150px;
-    border-radius: 50%;
-    max-width: 100%;
-    height: auto;
-    text-align: right;
-  }
-
-  /*responvive nav*/
-  .wrap {
-    width: 90%;
-  }
-
-  .menu {
-    display: inline-block;
-  }
-
-  .menu ul.showNav {
-    display: none;
-  }
-
-  .menu ul {
-    width: 50%;
-    height: 350px;
-    position: absolute;
-    top: 120%;
-    left: 0px;
-    padding: 10px 18px;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
-    border-radius: 3px;
-    background: #55443D;
-  }
-
-  /*add a small arrow*/
-  .menu ul:after {
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    top: 0%;
-    left: 0px;
-    content: '';
-    transform: translate(0%, -100%);
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-bottom: 7px solid #55443D;
-  }
-
-  .menu li {
-    margin: 5px 0px 5px 0px;
-    float: none;
-    display: block;
-  }
-
-  .menu a {
-    display: block;
-  }
-
-  .toggle-nav {
-    float: left;
-    display: inline-block;
-  }
+   .maincontainer{
+  position: relative;
+  margin-bottom: 50px;
+  width: 180px;
+  height: 300px;
+  background: none;
+  top: 180px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
 }
+
+.cardp{
+  font-size: 12px !important;
+   margin-top: 0 !important;
+   padding-top: 0 !important;
+   text-align:center !important;
+}
+
+
+
+#hero .profile-img {
+  width: 150px;
+  border-radius: 50%;
+  max-width:100%;
+  height:auto; 
+  text-align: right;
+}
+
+}
+
+
+
+
 
 /* Clear floats after the columns */
 .row:after {
@@ -825,9 +849,10 @@ div.at-container {
 #contact .sm-icon {
   width: 5%;
   margin: 10px;
+
 }
 
 footer {
-  text-align: center;
-  padding: 50px;
-}
+    text-align: center;
+    padding: 50px;
+  }
