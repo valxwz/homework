@@ -40,7 +40,7 @@ nav{
   position:fixed;
   top:0;
   left:0;
-  background:#55443D;
+  background:white;
   height:40px;
   width:100%;
   z-index: 1;
@@ -61,14 +61,14 @@ nav ul li{
 nav ul li a{      
         padding:10px 20px;
         display:block;
-        color:white;
+        color:black;
         text-decoration:none;
         transition:all 0.3s ease-in-out;}
 nav ul li.active{
-         color:#F49905;
+         color:#FFBF56;
          font-weight: bold;
-         background-color: #F49905;
-         border-bottom:3px solid #F49905;
+         background-color: #FFBF56;
+         border-bottom:3px solid #FFBF56;
 }
 
 
@@ -252,7 +252,7 @@ nav a:focus {
 }
 
 body {
-  background-color: #55443D;
+  background-color: white;
 }
 
 body {
@@ -309,7 +309,7 @@ section {
   width:30px;
 }
 footer {
-  color:white;
+  color:black;
   text-align: center;
   padding: 50px;
 }
@@ -760,7 +760,7 @@ div.at-container {
     padding:10px 18px;
     box-shadow:0px 1px 1px rgba(0,0,0,0.15);
     border-radius:3px;
-    background:#55443D;
+    background:white;
   }
 
 /*add a small arrow*/
@@ -774,7 +774,7 @@ div.at-container {
     transform:translate(0%, -100%);
     border-left:7px solid transparent;
     border-right:7px solid transparent;
-    border-bottom:7px solid #55443D;
+    border-bottom:7px solid white;
   }
 
 
