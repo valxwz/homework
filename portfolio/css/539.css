@@ -579,7 +579,7 @@ div.at-container {
 
 
 
-@media screen and (max-width: 950px){
+@media screen and (max-width:950px){
   .workcontainer {
   display: grid;
     grid-template-columns: 20px 1fr 20px;
@@ -646,7 +646,7 @@ div.at-container {
 }
 .text2{
   background-size: cover;
-  grid-column: 3/span 1;
+  grid-column: 2/span 1;
   grid-row: 4/span 1;
   overflow: hidden;
   max-height: 500px;
@@ -662,7 +662,7 @@ div.at-container {
 }
 .text4{
   background-size: cover;
-  grid-column: 3/span 1;
+  grid-column: 2/span 1;
   grid-row: 8/span 1;
   overflow: hidden;
   max-height: 500px;
