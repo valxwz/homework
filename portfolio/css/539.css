@@ -50,7 +50,7 @@ nav ul{
     margin:0;
     padding:0;
     list-style:none;
-    position:relative;
+    position:absolute;
     display:table;
     margin:0 auto;}
 
@@ -252,7 +252,7 @@ nav a:focus {
 }
 
 body {
-  background-color: #f1f1f1;
+  background-color: #55443D;
 }
 
 body {
@@ -309,6 +309,7 @@ section {
   width:30px;
 }
 footer {
+  color:white;
   text-align: center;
   padding: 50px;
 }
