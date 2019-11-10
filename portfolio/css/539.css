@@ -17,6 +17,7 @@ body {
   margin-left: 10px;
 }
 
+
 header {
   display: flex;
   position: fixed;
@@ -76,6 +77,9 @@ nav ul li.active{
 /*----- Toggle Button -----*/
 .toggle-nav {
   display:none;
+}
+.video{
+  display: inline-block;
 }
 
 
@@ -433,6 +437,7 @@ header a {
 #work{
   background-color: #F2EEEB;
   display:inline-block; 
+  width: 100%;
 
 }
 
@@ -526,7 +531,7 @@ div.at-container {
   justify-content: center;
   height: 100%;
 }
-@media screen and (min-width:500px){
+@media screen and (min-width:800px){
 .at-item {
   font-size: 24px;
   color: #3079ed;
@@ -568,31 +573,14 @@ div.at-container {
   }
 }
 
-/*end of css anamition*/
+
 
 /*grid change*/
-@media screen and (max-width:500px){
 
-   .maincontainer{
-  position: relative;
-  margin-bottom: 50px;
-  width: 200px;
-  height: 250px;
-  background: none;
-  top: 180px;
-  left: 50%;
-  margin-bottom: 80px;
-  transform: translate(-50%, -50%);
 
-}
-.cardp{
-  font-size: 15px !important;
-   margin-top: 0 !important;
-   padding-top: 0 !important;
-   text-align:left !important;
-}
 
-.workcontainer {
+@media screen and (max-width: 950px){
+  .workcontainer {
   display: grid;
     grid-template-columns: 20px 1fr 20px;
     grid-template-rows:400px 50px 400px 50px 400px 50px 400px 50px 400px 50px 400px 50px;
@@ -705,6 +693,30 @@ div.at-container {
     margin:50px auto;
     text-align: center;
 }
+}
+
+@media screen and (max-width:800px){
+
+   .maincontainer{
+  position: relative;
+  margin-bottom: 50px;
+  width: 200px;
+  height: 250px;
+  background: none;
+  top: 180px;
+  left: 50%;
+  margin-bottom: 80px;
+  transform: translate(-50%, -50%);
+
+}
+.cardp{
+  font-size: 15px !important;
+   margin-top: 0 !important;
+   padding-top: 0 !important;
+   text-align:left !important;
+}
+
+
   .column {
     flex: 50%;
     max-width: 50%;
@@ -782,7 +794,7 @@ div.at-container {
     float:left;
     display:inline-block;
   }
-  
+
 
 }
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -792,7 +804,7 @@ div.at-container {
 
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width:300px) {
+@media screen and (max-width:500px) {
   .contact_anno{
     display: none;
   }
@@ -831,6 +843,9 @@ div.at-container {
   max-width:100%;
   height:auto; 
   text-align: right;
+}
+.video{
+  display: none;
 }
 
 }
