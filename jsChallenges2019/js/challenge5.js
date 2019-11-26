@@ -12,12 +12,12 @@ for (let i = 0; i < imgs.length;i++){
 	 }
 
 	 imgs[i].onmouseleave = function() {
-	 	$('#image').css("background-image","url("+imgs[i].src+")");
+	 	$('#image').css("background-image","url('')");
 	 	$('#image').html(msg);
 	 }
 
 	 imgs[i].onblur = function() {
-	 	$('#image').css("background-image","url("+imgs[i].src+")");
+	 	$('#image').css("background-image","url('')");
 	 	$('#image').html(msg)
 	 }
 }
