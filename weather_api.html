@@ -46,7 +46,7 @@
 		place = "Ann Arbor";
 		}
 			let api_key = "67c5b7e0393f8f0da2117a1a1d41fb3c";
-				let query = "http://api.openweathermap.org/data/2.5/weather?q=Chicago&APPID=" +api_key+"&q=" + place + "&units=" + temp;
+				let query = "https://api.openweathermap.org/data/2.5/weather?q=Ann Arbor&APPID=" +api_key+"&q=" + place + "&units=" + temp;
 		console.log("Query is :" + query)
 		$.getJSON(query, function(json) {
 		$("#loc").text(place);
